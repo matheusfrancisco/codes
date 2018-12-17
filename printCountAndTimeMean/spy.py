@@ -36,8 +36,21 @@ class Test(object):
 
 
 def getMean(methodName,log='class.log'):
-    df = pd.read_csv('medias.txt')
-    print(df)
+    f = open("medias.txt", "r")
+    l= []
+    m= 0
+    line =0
+    for x in f:
+        print(x)
+        if('contador :' in x):
+            m = m +1
+    
+
+    print('A função foi chamada ', m, ' vezes')
+    
+
+
+
 
 if __name__ == "__main__":
     t = Test()

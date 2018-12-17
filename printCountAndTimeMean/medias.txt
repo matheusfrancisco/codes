@@ -1,13 +1,9 @@
-Data  ['2018-12-17 19:56:59.695127'] contador :  1 
- - Data  ['2018-12-17 19:56:59.695652'] contador :  2 
- - Data  ['2018-12-17 19:56:59.695987'] contador :  3 
- - Data  ['2018-12-17 19:56:59.696295'] contador :  4 
- - Data  ['2018-12-17 19:57:26.052049'] contador :  1 
- - Data  ['2018-12-17 19:57:26.054103'] contador :  2 
- - Data  ['2018-12-17 19:57:26.054626'] contador :  3 
- - Data  ['2018-12-17 19:57:26.054959'] contador :  4 
- - Data  ['2018-12-17 19:57:32.983648'] contador :  1 
- - Data  ['2018-12-17 19:57:32.984052'] contador :  2 
- - Data  ['2018-12-17 19:57:32.984361'] contador :  3 
- - Data  ['2018-12-17 19:57:32.984670'] contador :  4 
+Data  [datetime.datetime(2018, 12, 17, 20, 5, 29, 719227)] contador :  1 
+ - Data  [datetime.datetime(2018, 12, 17, 20, 5, 29, 720871)] contador :  2 
+ - Data  [datetime.datetime(2018, 12, 17, 20, 5, 29, 721260)] contador :  3 
+ - Data  [datetime.datetime(2018, 12, 17, 20, 5, 29, 721544)] contador :  4 
+ - Data  ['2018-12-17 20:06:21.743291'] contador :  1 
+ - Data  ['2018-12-17 20:06:21.746743'] contador :  2 
+ - Data  ['2018-12-17 20:06:21.748978'] contador :  3 
+ - Data  ['2018-12-17 20:06:21.750135'] contador :  4 
  - 
