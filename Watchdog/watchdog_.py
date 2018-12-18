@@ -44,7 +44,6 @@ class Watchdog(object):
 
     def handler(self):  # é chamado caso esgote o tempo.
         self.thread.quit()
-        raise watchdogTimeoutException("WatchdogErrorVallue")
 
 
 
@@ -98,8 +97,8 @@ def fn():
             #n = functionInfinita()
             print('oi')
             wd.reset()
-    except watchdogTimeoutException:
-        pass
+    except :
+        print("watchdogVallueError")
         #print('Error Watchdog')
         #print(e.error)
             
