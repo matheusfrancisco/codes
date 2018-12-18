@@ -6,17 +6,9 @@ import threading
 import random
 
 
-class MyException(Exception):
+class watchdogTimeoutException(Exception):
     pass
-
-class ValidationError(Exception):
-    def __init__(self, message, errors):
-        # Call the base class constructor with the parameters it needs
-        super(ValidationError, self).__init__(message)
-
-        # Now for your custom code...
-        self.errors = errors
-
+       
 
 def _async_raise(tid, exctype):
     """Raises an exception in the threads with id tid"""
@@ -52,6 +44,9 @@ class Watchdog(object):
 
     def handler(self):  # é chamado caso esgote o tempo.
         self.thread.quit()
+        raise watchdogTimeoutException("WatchdogErrorVallue")
+
+
 
 
 class ThreadWithExc(threading.Thread):
@@ -95,21 +90,21 @@ def fn():
     wd.start()
     try:
         while (True):
-            #import time
-            #randomTime = random.randint(0, 2)
-            #print(randomTime)
-            #time.sleep(randomTime)
-            #Da sempre erro pois a função é infinita não printa o OI
-            n = functionInfinita()
+            import time
+            randomTime = random.randint(0, 2)
+            print(randomTime)
+            time.sleep(randomTime)
+            #Da sempre erro pois a função é infinita não printa OI
+            #n = functionInfinita()
             print('oi')
             wd.reset()
-    #except ValidationError('WatchdogExceptionValue'):
-    #except WatchdogExceptionValue:
+    except watchdogTimeoutException:
         pass
-  
+        #print('Error Watchdog')
+        #print(e.error)
+            
 
 if __name__ == "__main__":
-    
     twe = ThreadWithExc(target=fn)
     wd = Watchdog(1,twe)
 
